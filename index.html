@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Rush Duel</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <canvas id="gameCanvas" aria-label="Split-screen racing duel"></canvas>
+
+    <div class="status-banner" id="statusBanner">
+      Press Start Duel to launch the arena.
+    </div>
+
+    <section class="menu" id="menu">
+      <div class="menu__panel">
+        <p class="menu__eyebrow">Blur-inspired local split-screen combat racer</p>
+        <h1>Neon Rush Duel</h1>
+        <p class="menu__lead">
+          A fast two-player duel built for phones and computers: split screen, racing lines,
+          boost pads, pulse shots, and same-device multiplayer.
+        </p>
+
+        <div class="menu__grid">
+          <article class="info-card">
+            <h2>Desktop</h2>
+            <p>
+              Player 1 steers with <strong>A / D</strong>, Player 2 steers with
+              <strong>Left / Right Arrow</strong>, and shooting happens with the
+              <strong>left mouse button</strong>.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h2>Mobile</h2>
+            <p>
+              Each player gets their own <strong>left</strong>, <strong>right</strong>,
+              and <strong>fire</strong> controls inside their screen half.
+            </p>
+          </article>
+        </div>
+
+        <button class="menu__button" id="startButton" type="button">Start Duel</button>
+
+        <p class="menu__note">
+          This demo uses original visuals and track art inspired by arcade combat racers.
+          It does not copy Blur's exact maps or assets.
+        </p>
+      </div>
+    </section>
+
+    <div class="touch-layer" id="touchLayer" aria-hidden="true">
+      <div class="touch-cluster touch-cluster--p1">
+        <div class="touch-wheel">
+          <button class="touch-button" data-player="0" data-action="left" type="button">Left</button>
+          <button class="touch-button" data-player="0" data-action="right" type="button">Right</button>
+        </div>
+        <button class="touch-button touch-button--fire" data-player="0" data-action="fire" type="button">
+          Fire
+        </button>
+      </div>
+
+      <div class="touch-cluster touch-cluster--p2">
+        <div class="touch-wheel">
+          <button class="touch-button" data-player="1" data-action="left" type="button">Left</button>
+          <button class="touch-button" data-player="1" data-action="right" type="button">Right</button>
+        </div>
+        <button class="touch-button touch-button--fire" data-player="1" data-action="fire" type="button">
+          Fire
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+
